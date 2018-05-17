@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="4" failures="0" name="Login into the application" skipped="0" tests="4" time="10.48" timestamp="2018-05-17 05:02:26"><testcase name="Log in with an existent account and valid data"><error message="The JSON input text should neither be null nor empty." type="java.lang.IllegalArgumentException">The JSON input text should neither be null nor empty.</error><system-err>The JSON input text should neither be null nor empty.&#13;
+io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)&#13;
+io.restassured.path.json.JsonPath.get(JsonPath.java:201)&#13;
+steps.GeneralSteps.theServiceShouldResponseWithAToken(GeneralSteps.java:15)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase><testcase name="Log in with invalid information"><error message="The JSON input text should neither be null nor empty." type="java.lang.IllegalArgumentException">The JSON input text should neither be null nor empty.</error><system-err>The JSON input text should neither be null nor empty.&#13;
+io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)&#13;
+io.restassured.path.json.JsonPath.get(JsonPath.java:201)&#13;
+steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase><testcase name="Do not add information in the login form"><error message="The JSON input text should neither be null nor empty." type="java.lang.IllegalArgumentException">The JSON input text should neither be null nor empty.</error><system-err>The JSON input text should neither be null nor empty.&#13;
+io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)&#13;
+io.restassured.path.json.JsonPath.get(JsonPath.java:201)&#13;
+steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

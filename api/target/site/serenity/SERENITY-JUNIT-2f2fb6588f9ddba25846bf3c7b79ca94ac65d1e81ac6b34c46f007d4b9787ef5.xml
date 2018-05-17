@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="8" name="Register" skipped="0" tests="9" time="12.0" timestamp="2018-05-17 05:01:19"><testcase name="Create account with valid data"/><testcase name="Create an account with invalid data"><failure message="&#10;Expected: &quot;The email is invalid&quot;&#10;     but: was &quot;Internal Server Error&quot;" type="java.lang.AssertionError">
+Expected: "The email is invalid"
+     but: was "Internal Server Error"</failure><system-err>
+Expected: "The email is invalid"
+     but: was "Internal Server Error"&#13;
+steps.RegisterStep.theSystemShouldRetrieve(RegisterStep.java:38)&#13;
+✽.the system should retrieve "The email is invalid"(src/test/resources/registerUser.feature:15)&#13;
+</system-err></testcase><testcase name="Create an account with existing field"><failure message="&#10;Expected: &quot;The email should be unique&quot;&#10;     but: was &quot;Internal Server Error&quot;" type="java.lang.AssertionError">
+Expected: "The email should be unique"
+     but: was "Internal Server Error"</failure><system-err>
+Expected: "The email should be unique"
+     but: was "Internal Server Error"&#13;
+steps.RegisterStep.theSystemShouldRetrieve(RegisterStep.java:38)&#13;
+✽.the system should retrieve "The email should be unique"(src/test/resources/registerUser.feature:29)&#13;
+</system-err></testcase><testcase name="Do not add any information in the register form"><failure message="&#10;Expected: &quot;400&quot;&#10;     but: was &quot;500&quot;" type="java.lang.AssertionError">
+Expected: "400"
+     but: was "500"</failure><system-err>
+Expected: "400"
+     but: was "500"&#13;
+steps.GeneralSteps.theSystemShouldRetrieveStatusCode(GeneralSteps.java:28)&#13;
+✽.the system should retrieve status code "400"(src/test/resources/registerUser.feature:39)&#13;
+</system-err></testcase></testsuite>
