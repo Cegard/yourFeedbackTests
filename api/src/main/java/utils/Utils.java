@@ -22,6 +22,6 @@ public class Utils {
     }
 
     public static String getRandomPassword() {
-        return "P" + RandomStringUtils.randomAlphanumeric(8);
+        return "P" + RandomStringUtils.randomAlphanumeric(8) + "0";
     }
 }

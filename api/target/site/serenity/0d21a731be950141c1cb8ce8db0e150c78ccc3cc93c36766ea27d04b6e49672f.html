@@ -78,7 +78,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-05-2018 17:01</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-05-2018 08:45</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -113,9 +113,9 @@ So that I can have a profile and interact with the page
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
                             <span class="test-case-title">
-                                    <span class="failing-color">
+                                    <span class="success-color">
                                     Do not add any information in the register form
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -164,7 +164,7 @@ So that I can have a profile and interact with the page
                         </div>
                     </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.01s</span></td>
+                    <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -187,7 +187,7 @@ So that I can have a profile and interact with the page
                         </div>
                     </td>
                     <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">0.19s</span></td>
+                    <td width="100"><span class="top-level-step">0.04s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
@@ -202,7 +202,7 @@ So that I can have a profile and interact with the page
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                             </span>
 
                                 <span class="rest-query">
@@ -222,11 +222,11 @@ So that I can have a profile and interact with the page
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="restModalLabel">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <p>Status code: 500</p>
+                                    <p>Status code: 400</p>
                                     <p>Content Type: application/json</p>
                                     <h5>Request Headers</h5>
                                     <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
@@ -235,9 +235,9 @@ So that I can have a profile and interact with the page
                                     <h5>Request Cookies</h5>
                                     <pre></pre>
                                     <h5>Response Headers</h5>
-                                    <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Thu, 17 May 2018 22:01:31 GMT<br>Connection: close</pre>
+                                    <pre>Content-Type: text/plain;charset=UTF-8<br>Content-Length: 20<br>Date: Mon, 21 May 2018 13:45:34 GMT<br>Connection: close</pre>
                                 <h5>Response Body</h5>
-                                    <pre>{<br>    &quot;timestamp&quot;: &quot;2018-05-17T22:01:31.223+0000&quot;,<br>    &quot;status&quot;: 500,<br>    &quot;error&quot;: &quot;Internal Server Error&quot;,<br>    &quot;message&quot;: &quot;query did not return a unique result: 5; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 5&quot;,<br>    &quot;path&quot;: &quot;/auth/register&quot;<br>}</pre>
+                                    <pre>The email is invalid</pre>
                                     <h5>Response Cookies</h5>
                                     <pre></pre>
                             </div>
@@ -259,11 +259,11 @@ So that I can have a profile and interact with the page
                     </table>
                     </td>
                     <tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         <a name="2"/>
                             <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                                  class="top-level-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
@@ -273,59 +273,13 @@ So that I can have a profile and interact with the page
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">FAILURE</span></td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
                     <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="4" class="error-message-cell">
-                            <div class="error-message ellipsis"
-                                 title='Assertion error: Expected: &quot;400&quot; but: was &quot;500&quot;'>
-                                <pre>Assertion error: Expected: &quot;400&quot; but: was &quot;500&quot;</pre>
-                            </div>
-                <div><!-- Stack trace -->
-                    <button type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#stacktraceModal-4">
-                        View details
-                    </button>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="stacktraceModal-4" tabindex="-1" role="dialog"
-                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title" id="stacktraceModalLabel">
-                                    java.lang.AssertionError
-                                </h4>
-                            </div>
-                            <div class="modal-body">
-                                    <h5>
-                                        <pre>Expected: &quot;400&quot;<br>     but: was &quot;500&quot;</pre>
-                                    </h5>
-                                    steps.GeneralSteps.theSystemShouldRetrieveStatusCode(GeneralSteps.java
-                                    :28) <br>
-                                    ✽.the system should retrieve status code "400"(src/test/resources/registerUser.feature
-                                    :39) <br>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        </td>
-                    </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td colspan="2"></td>
-                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>0.21s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.05s</em></span></td>
                 </tr>
 
             </table>

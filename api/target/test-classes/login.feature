@@ -22,7 +22,6 @@ Feature: Login into the application
     When she sends a request to the login service
     Then the system should retrieve error "Please fill all mandatory fields"
     And status code "400"
-
     Examples:
       | field    |
       | email    |

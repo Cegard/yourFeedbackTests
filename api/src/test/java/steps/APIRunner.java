@@ -6,7 +6,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = {"src/test/resources/login.feature"},
+@CucumberOptions(features = {"src/test/resources"},
         format = {"pretty", "html:target/site/cucumber-pretty", "json:target/cucumber.json"},
         strict = true)
 

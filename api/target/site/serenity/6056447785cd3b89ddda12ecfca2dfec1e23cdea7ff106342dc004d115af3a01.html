@@ -78,7 +78,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-05-2018 17:01</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-05-2018 08:45</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -113,9 +113,9 @@ So that I can have a profile and interact with the page
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
                             <span class="test-case-title">
-                                    <span class="failing-color">
+                                    <span class="success-color">
                                     Create an account with existing field
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -156,17 +156,17 @@ So that I can have a profile and interact with the page
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="test-FAILURE"><a href="#0">1</a></td>
-                            <td class="test-FAILURE"><a href="#0">email</a>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a href="#0">email</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">The email should be unique</a>
+                            <td class="test-SUCCESS"><a href="#0">User already exist</a>
                             </td>
                     </tr>
                     <tr>
-                        <td class="test-FAILURE"><a href="#1">2</a></td>
-                            <td class="test-FAILURE"><a href="#1">document</a>
+                        <td class="test-SUCCESS"><a href="#1">2</a></td>
+                            <td class="test-SUCCESS"><a href="#1">document</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#1">The document should be unique</a>
+                            <td class="test-SUCCESS"><a href="#1">User already exist</a>
                             </td>
                     </tr>
                 </tbody>
@@ -189,12 +189,12 @@ So that I can have a profile and interact with the page
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         <a name="0"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0 failure-icon"
+                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -203,14 +203,14 @@ So that I can have a profile and interact with the page
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                             <span class="top-level-step">
-                                Create an account with existing field #1: {field=email, error=The email should be unique}
+                                Create an account with existing field #1: {field=email, error=User already exist}
                             </span>
                             </a>
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">FAILURE</span></td>
-                    <td width="100"><span class="top-level-step">0.43s</span></td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">0.09s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
@@ -248,7 +248,7 @@ So that I can have a profile and interact with the page
                         </div>
                     </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">0.21s</span></td>
+                    <td width="100"><span class="nested-step">0.05s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -259,7 +259,7 @@ So that I can have a profile and interact with the page
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                             </span>
 
                                 <span class="rest-query">
@@ -279,7 +279,7 @@ So that I can have a profile and interact with the page
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="restModalLabel">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                                 </h4>
                             </div>
                             <div class="modal-body">
@@ -288,13 +288,13 @@ So that I can have a profile and interact with the page
                                     <h5>Request Headers</h5>
                                     <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
                                     <h5>Content Body</h5>
-                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;610370&quot;,<br>    &quot;name&quot;: &quot;4b199d&quot;,<br>    &quot;lastName&quot;: &quot;e779eb&quot;,<br>    &quot;gender&quot;: &quot;dd4a6e&quot;,<br>    &quot;email&quot;: &quot;api-e52a75@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;Pj3XPLIQ0&quot;,<br>    &quot;validatePassword&quot;: &quot;Pj3XPLIQ0&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
+                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;395294&quot;,<br>    &quot;name&quot;: &quot;04d529&quot;,<br>    &quot;lastName&quot;: &quot;a3b5ca&quot;,<br>    &quot;gender&quot;: &quot;9c96ac&quot;,<br>    &quot;email&quot;: &quot;api-9800c8@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PgLLnU7LZ0&quot;,<br>    &quot;validatePassword&quot;: &quot;PgLLnU7LZ0&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
                                     <h5>Request Cookies</h5>
                                     <pre></pre>
                                     <h5>Response Headers</h5>
-                                    <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Thu, 17 May 2018 22:01:30 GMT</pre>
+                                    <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Mon, 21 May 2018 13:45:34 GMT</pre>
                                 <h5>Response Body</h5>
-                                    <pre>{<br>    &quot;email&quot;: &quot;api-e52a75@hotmail.com&quot;,<br>    &quot;password&quot;: null,<br>    &quot;token&quot;: &quot;eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..SGjB9MXJlu3o31O2CLPIWA.86YaaAs-NM_7SncN6PKTEocQ7fdlAtGfgDrDSxk7D1W0Q7Xg_0L5bmrJNgssGZmrsI2hLOBYJlyJLun_mzrB5A.XhXGh4rsVqIeZyfbnfxD6A&quot;,<br>    &quot;secretKey&quot;: &quot;DSu6dnSnEWxNLSyJyjfZF9004rtzEsQQd84cdKxQMZk=&quot;,<br>    &quot;id&quot;: null<br>}</pre>
+                                    <pre>{<br>    &quot;email&quot;: &quot;api-9800c8@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PgLLnU7LZ0&quot;,<br>    &quot;token&quot;: &quot;eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..D4WhF4V91N3senmaTxcMYg.tEfnJZY3zoZw98dnkXWgxLcqGJt8trv27Ra1PvobbTYAUtmFmR74DPIOuAZv2HHlxpMuWwly3RzZ2MnHZllwKw.AuI8GJf8qo9C1sOaaf4bfA&quot;,<br>    &quot;secretKey&quot;: &quot;maMxnj9BwC2Is4DtTcIdYCJKR65pQVbNVwpqCcAb38E=&quot;,<br>    &quot;id&quot;: 651<br>}</pre>
                                     <h5>Response Cookies</h5>
                                     <pre></pre>
                             </div>
@@ -328,7 +328,7 @@ So that I can have a profile and interact with the page
                         </div>
                     </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">0.19s</span></td>
+                    <td width="100"><span class="nested-step">0.03s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -339,7 +339,7 @@ So that I can have a profile and interact with the page
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                             </span>
 
                                 <span class="rest-query">
@@ -359,22 +359,22 @@ So that I can have a profile and interact with the page
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="restModalLabel">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <p>Status code: 500</p>
+                                    <p>Status code: 400</p>
                                     <p>Content Type: application/json</p>
                                     <h5>Request Headers</h5>
                                     <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
                                     <h5>Content Body</h5>
-                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;610370&quot;,<br>    &quot;name&quot;: &quot;4b199d&quot;,<br>    &quot;lastName&quot;: &quot;e779eb&quot;,<br>    &quot;gender&quot;: &quot;dd4a6e&quot;,<br>    &quot;email&quot;: &quot;api-e52a75@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;Pj3XPLIQ0&quot;,<br>    &quot;validatePassword&quot;: &quot;Pj3XPLIQ0&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
+                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;395294&quot;,<br>    &quot;name&quot;: &quot;04d529&quot;,<br>    &quot;lastName&quot;: &quot;a3b5ca&quot;,<br>    &quot;gender&quot;: &quot;9c96ac&quot;,<br>    &quot;email&quot;: &quot;api-9800c8@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PgLLnU7LZ0&quot;,<br>    &quot;validatePassword&quot;: &quot;PgLLnU7LZ0&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
                                     <h5>Request Cookies</h5>
                                     <pre></pre>
                                     <h5>Response Headers</h5>
-                                    <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Thu, 17 May 2018 22:01:30 GMT<br>Connection: close</pre>
+                                    <pre>Content-Type: text/plain;charset=UTF-8<br>Content-Length: 18<br>Date: Mon, 21 May 2018 13:45:34 GMT<br>Connection: close</pre>
                                 <h5>Response Body</h5>
-                                    <pre>{<br>    &quot;timestamp&quot;: &quot;2018-05-17T22:01:30.381+0000&quot;,<br>    &quot;status&quot;: 500,<br>    &quot;error&quot;: &quot;Internal Server Error&quot;,<br>    &quot;message&quot;: &quot;query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2&quot;,<br>    &quot;path&quot;: &quot;/auth/register&quot;<br>}</pre>
+                                    <pre>User already exist</pre>
                                     <h5>Response Cookies</h5>
                                     <pre></pre>
                             </div>
@@ -393,74 +393,28 @@ So that I can have a profile and interact with the page
                     <td width="100"><span class="nested-group-step">0s</span></td>
                 </tr>
 
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                Then the system should retrieve "The email should be unique"
+                                Then the system should retrieve "User already exist"
                             </span>
 
                         </div>
                     </td>
-                    <td width="100"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step">0.02s</span></td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0s</span></td>
                 </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="4" class="error-message-cell">
-                            <div class="error-message ellipsis"
-                                 title='Assertion error: Expected: &quot;The email should be unique&quot; but: was &quot;Internal Server Error&quot;'>
-                                <pre>Assertion error: Expected: &quot;The email should be unique&quot; but: was &quot;Internal Server Error&quot;</pre>
-                            </div>
-                <div><!-- Stack trace -->
-                    <button type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#stacktraceModal-7">
-                        View details
-                    </button>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="stacktraceModal-7" tabindex="-1" role="dialog"
-                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title" id="stacktraceModalLabel">
-                                    java.lang.AssertionError
-                                </h4>
-                            </div>
-                            <div class="modal-body">
-                                    <h5>
-                                        <pre>Expected: &quot;The email should be unique&quot;<br>     but: was &quot;Internal Server Error&quot;</pre>
-                                    </h5>
-                                    steps.RegisterStep.theSystemShouldRetrieve(RegisterStep.java
-                                    :38) <br>
-                                    ✽.the system should retrieve "The email should be unique"(src/test/resources/registerUser.feature
-                                    :29) <br>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        </td>
-                    </tr>
-                <tr class="test-SKIPPED">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
@@ -470,19 +424,19 @@ So that I can have a profile and interact with the page
 
                         </div>
                     </td>
-                    <td width="100"><span class="nested-group-step">SKIPPED</span></td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
                     <td width="100"><span class="nested-group-step">0s</span></td>
                 </tr>
 
                     </table>
                     </td>
                     <tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         <a name="1"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection1 failure-icon"
+                                <i class="fa fa-plus-square-o imgstepSection1 success-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -491,14 +445,14 @@ So that I can have a profile and interact with the page
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block;">
                             <span class="top-level-step">
-                                Create an account with existing field #2: {field=document, error=The document should be unique}
+                                Create an account with existing field #2: {field=document, error=User already exist}
                             </span>
                             </a>
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">FAILURE</span></td>
-                    <td width="100"><span class="top-level-step">0.42s</span></td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">0.13s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
@@ -536,7 +490,7 @@ So that I can have a profile and interact with the page
                         </div>
                     </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">0.2s</span></td>
+                    <td width="100"><span class="nested-step">0.06s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -547,7 +501,7 @@ So that I can have a profile and interact with the page
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                             </span>
 
                                 <span class="rest-query">
@@ -567,7 +521,7 @@ So that I can have a profile and interact with the page
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="restModalLabel">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                                 </h4>
                             </div>
                             <div class="modal-body">
@@ -576,13 +530,13 @@ So that I can have a profile and interact with the page
                                     <h5>Request Headers</h5>
                                     <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
                                     <h5>Content Body</h5>
-                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;429755&quot;,<br>    &quot;name&quot;: &quot;777810&quot;,<br>    &quot;lastName&quot;: &quot;d832ee&quot;,<br>    &quot;gender&quot;: &quot;43e804&quot;,<br>    &quot;email&quot;: &quot;api-d0d8de@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PnYpO707i&quot;,<br>    &quot;validatePassword&quot;: &quot;PnYpO707i&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
+                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;136754&quot;,<br>    &quot;name&quot;: &quot;28be3d&quot;,<br>    &quot;lastName&quot;: &quot;bbcc95&quot;,<br>    &quot;gender&quot;: &quot;f75fea&quot;,<br>    &quot;email&quot;: &quot;api-5391ae@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PaQBtZkGb0&quot;,<br>    &quot;validatePassword&quot;: &quot;PaQBtZkGb0&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
                                     <h5>Request Cookies</h5>
                                     <pre></pre>
                                     <h5>Response Headers</h5>
-                                    <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Thu, 17 May 2018 22:01:30 GMT</pre>
+                                    <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Mon, 21 May 2018 13:45:34 GMT</pre>
                                 <h5>Response Body</h5>
-                                    <pre>{<br>    &quot;email&quot;: &quot;api-d0d8de@hotmail.com&quot;,<br>    &quot;password&quot;: null,<br>    &quot;token&quot;: &quot;eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..G_4ZC0OntHfHz2piwtDjvw.53sqM5iK_Dvcdz8hBUkjRa2t1S0oaxcp3FuJg48h_FEw71nr2MiCZYL3IgwmpP9DJNdpsaQ5bAkNF0lep84QoQ.brO53AFx43jItrY80BkbQw&quot;,<br>    &quot;secretKey&quot;: &quot;SXD/lnx4bHSXveNYcgnsyjPc+fAkLN3RPpTpCNT18B0=&quot;,<br>    &quot;id&quot;: null<br>}</pre>
+                                    <pre>{<br>    &quot;email&quot;: &quot;api-5391ae@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PaQBtZkGb0&quot;,<br>    &quot;token&quot;: &quot;eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..EV76bTM-OGTeDITXowY6sg.fjus2_vfstUXfNRJ_lKrq6_0V_w2theFeqM-lxkdtM3LwNrM7ts2HllK9D7oFd1wy1t9zlPjjRr4WJM8B0Fjkw.x2g_DP56fo0cVLdDDqnHZQ&quot;,<br>    &quot;secretKey&quot;: &quot;E+vPOQOafv0AZT9AQMRnjXnpPGv3JCWh29NlvzXIw5s=&quot;,<br>    &quot;id&quot;: 652<br>}</pre>
                                     <h5>Response Cookies</h5>
                                     <pre></pre>
                             </div>
@@ -616,7 +570,7 @@ So that I can have a profile and interact with the page
                         </div>
                     </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">0.19s</span></td>
+                    <td width="100"><span class="nested-step">0.05s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -627,7 +581,7 @@ So that I can have a profile and interact with the page
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                             </span>
 
                                 <span class="rest-query">
@@ -647,22 +601,22 @@ So that I can have a profile and interact with the page
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="restModalLabel">
-                                POST http://54.226.98.250:9090/auth/register
+                                POST http://172.17.228.115:9090/auth/register
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <p>Status code: 500</p>
+                                    <p>Status code: 400</p>
                                     <p>Content Type: application/json</p>
                                     <h5>Request Headers</h5>
                                     <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
                                     <h5>Content Body</h5>
-                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;429755&quot;,<br>    &quot;name&quot;: &quot;777810&quot;,<br>    &quot;lastName&quot;: &quot;d832ee&quot;,<br>    &quot;gender&quot;: &quot;43e804&quot;,<br>    &quot;email&quot;: &quot;api-d0d8de@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PnYpO707i&quot;,<br>    &quot;validatePassword&quot;: &quot;PnYpO707i&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
+                                    <pre>{<br>    &quot;documentType&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    },<br>    &quot;document&quot;: &quot;136754&quot;,<br>    &quot;name&quot;: &quot;28be3d&quot;,<br>    &quot;lastName&quot;: &quot;bbcc95&quot;,<br>    &quot;gender&quot;: &quot;f75fea&quot;,<br>    &quot;email&quot;: &quot;api-5391ae@hotmail.com&quot;,<br>    &quot;password&quot;: &quot;PaQBtZkGb0&quot;,<br>    &quot;validatePassword&quot;: &quot;PaQBtZkGb0&quot;,<br>    &quot;area&quot;: {<br>        &quot;id&quot;: &quot;1&quot;<br>    }<br>}</pre>
                                     <h5>Request Cookies</h5>
                                     <pre></pre>
                                     <h5>Response Headers</h5>
-                                    <pre>Content-Type: application/json;charset=UTF-8<br>Transfer-Encoding: chunked<br>Date: Thu, 17 May 2018 22:01:30 GMT<br>Connection: close</pre>
+                                    <pre>Content-Type: text/plain;charset=UTF-8<br>Content-Length: 18<br>Date: Mon, 21 May 2018 13:45:34 GMT<br>Connection: close</pre>
                                 <h5>Response Body</h5>
-                                    <pre>{<br>    &quot;timestamp&quot;: &quot;2018-05-17T22:01:30.808+0000&quot;,<br>    &quot;status&quot;: 500,<br>    &quot;error&quot;: &quot;Internal Server Error&quot;,<br>    &quot;message&quot;: &quot;query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2&quot;,<br>    &quot;path&quot;: &quot;/auth/register&quot;<br>}</pre>
+                                    <pre>User already exist</pre>
                                     <h5>Response Cookies</h5>
                                     <pre></pre>
                             </div>
@@ -681,74 +635,28 @@ So that I can have a profile and interact with the page
                     <td width="100"><span class="nested-group-step">0s</span></td>
                 </tr>
 
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                Then the system should retrieve "The document should be unique"
+                                Then the system should retrieve "User already exist"
                             </span>
 
                         </div>
                     </td>
-                    <td width="100"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step">0.01s</span></td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0s</span></td>
                 </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="4" class="error-message-cell">
-                            <div class="error-message ellipsis"
-                                 title='Assertion error: Expected: &quot;The document should be unique&quot; but: was &quot;Internal Server Error&quot;'>
-                                <pre>Assertion error: Expected: &quot;The document should be unique&quot; but: was &quot;Internal Server Error&quot;</pre>
-                            </div>
-                <div><!-- Stack trace -->
-                    <button type="button" class="btn btn-danger" data-toggle="modal"
-                            data-target="#stacktraceModal-15">
-                        View details
-                    </button>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="stacktraceModal-15" tabindex="-1" role="dialog"
-                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-label="Close"><span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title" id="stacktraceModalLabel">
-                                    java.lang.AssertionError
-                                </h4>
-                            </div>
-                            <div class="modal-body">
-                                    <h5>
-                                        <pre>Expected: &quot;The document should be unique&quot;<br>     but: was &quot;Internal Server Error&quot;</pre>
-                                    </h5>
-                                    steps.RegisterStep.theSystemShouldRetrieve(RegisterStep.java
-                                    :38) <br>
-                                    ✽.the system should retrieve "The document should be unique"(src/test/resources/registerUser.feature
-                                    :29) <br>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        </td>
-                    </tr>
-                <tr class="test-SKIPPED">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
@@ -758,17 +666,17 @@ So that I can have a profile and interact with the page
 
                         </div>
                     </td>
-                    <td width="100"><span class="nested-group-step">SKIPPED</span></td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
                     <td width="100"><span class="nested-group-step">0s</span></td>
                 </tr>
 
                     </table>
                     </td>
                     <tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                     <td colspan="2"></td>
-                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>1.04s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.56s</em></span></td>
                 </tr>
 
             </table>

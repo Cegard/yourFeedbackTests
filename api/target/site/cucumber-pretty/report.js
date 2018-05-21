@@ -1,4 +1,499 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/editProfile.feature");
+formatter.feature({
+  "name": "Edit profile",
+  "description": "  AS a user\n  I want to edit my profile\n  SO THAT I can set my document type, document, name, last name, email, password, and role",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Add new information in the profile page",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she fills the register information",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheFillsTheRegisterInformation()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheSendsARequestToTheEditProfileService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the service should response with the profile",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "EditProfileSteps.theServiceShouldResponseWithTheProfile()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"200\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "Edit email and password with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "she requests to edit her profile with \"\u003cemail\u003e\", \"\u003cpassword\u003e\" and \"\u003cverificationPassword\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "the system should retrieve \"\u003cerror\u003e\" message",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "email",
+        "password",
+        "verificationPassword",
+        "error"
+      ]
+    },
+    {
+      "cells": [
+        "email",
+        "Abcdefg0",
+        "Abcdefg0",
+        "The email is invalid"
+      ]
+    },
+    {
+      "cells": [
+        "email@domain.com",
+        "abcdefg0",
+        "abcdefg0",
+        "The password must contain at least one capital letter"
+      ]
+    },
+    {
+      "cells": [
+        "email@domain.com",
+        "Abcdefgh",
+        "Abcdefgh",
+        "The password must contain a number"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Edit email and password with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she requests to edit her profile with \"email\", \"Abcdefg0\" and \"Abcdefg0\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheRequestsToEditHerProfileWithAnd(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheSendsARequestToTheEditProfileService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"The email is invalid\" message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "EditProfileSteps.theSystemShouldRetrieveMessage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Edit email and password with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she requests to edit her profile with \"email@domain.com\", \"abcdefg0\" and \"abcdefg0\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheRequestsToEditHerProfileWithAnd(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheSendsARequestToTheEditProfileService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"The password must contain at least one capital letter\" message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "EditProfileSteps.theSystemShouldRetrieveMessage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Edit email and password with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she requests to edit her profile with \"email@domain.com\", \"Abcdefgh\" and \"Abcdefgh\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheRequestsToEditHerProfileWithAnd(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheSendsARequestToTheEditProfileService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"The password must contain a number\" message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "EditProfileSteps.theSystemShouldRetrieveMessage(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "Edit email with an existent record",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "she request to modify with an existent \"\u003cfield\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "the system should retrieve \"\u003cerrorMessage\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "field",
+        "errorMessage"
+      ]
+    },
+    {
+      "cells": [
+        "email",
+        "User already exist"
+      ]
+    },
+    {
+      "cells": [
+        "document",
+        "User already exist"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Edit email with an existent record",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she request to modify with an existent \"email\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheRequestToModifyWithAnExistent(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheSendsARequestToTheEditProfileService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"User already exist\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Edit email with an existent record",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she request to modify with an existent \"document\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheRequestToModifyWithAnExistent(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheSendsARequestToTheEditProfileService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"User already exist\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Not add any information in the register form",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she does not send any information",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheDoesNotSendAnyInformation()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the edit profile service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "EditProfileSteps.sheSendsARequestToTheEditProfileService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve status code \"400\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "GeneralSteps.theSystemShouldRetrieveStatusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.uri("src/test/resources/login.feature");
 formatter.feature({
   "name": "Login into the application",
   "description": "  AS a user\n  I WANT TO log in to the website\n  SO THAT I can see my profile and grade events and persons",
@@ -47,8 +542,7 @@ formatter.match({
   "location": "GeneralSteps.theServiceShouldResponseWithAToken()"
 });
 formatter.result({
-  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:930)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theServiceShouldResponseWithAToken(GeneralSteps.java:15)\r\n\tat ✽.the service should response with a token(src/test/resources/login.feature:10)\r\nCaused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)\r\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:893)\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:928)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theServiceShouldResponseWithAToken(GeneralSteps.java:15)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:32)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:26)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)\r\n\tat cucumber.api.TestStep.executeStep(TestStep.java:102)\r\n\tat cucumber.api.TestStep.run(TestStep.java:83)\r\n\tat cucumber.api.TestCase.run(TestCase.java:58)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:80)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:117)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:55)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:126)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "status code \"200\"",
@@ -58,7 +552,7 @@ formatter.match({
   "location": "GeneralSteps.statusCode(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "Log in with invalid information",
@@ -93,8 +587,7 @@ formatter.match({
   "location": "GeneralSteps.theSystemShouldRetrieveError(String)"
 });
 formatter.result({
-  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:930)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)\r\n\tat ✽.the system should retrieve error \"The email and password do not match\"(src/test/resources/login.feature:16)\r\nCaused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)\r\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:893)\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:928)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:32)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:26)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)\r\n\tat cucumber.api.TestStep.executeStep(TestStep.java:102)\r\n\tat cucumber.api.TestStep.run(TestStep.java:83)\r\n\tat cucumber.api.TestCase.run(TestCase.java:58)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:80)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:117)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:55)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:126)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "status code \"400\"",
@@ -104,7 +597,7 @@ formatter.match({
   "location": "GeneralSteps.statusCode(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.scenarioOutline({
   "name": "Do not add information in the login form",
@@ -196,8 +689,7 @@ formatter.match({
   "location": "GeneralSteps.theSystemShouldRetrieveError(String)"
 });
 formatter.result({
-  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:930)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)\r\n\tat ✽.the system should retrieve error \"Please fill all mandatory fields\"(src/test/resources/login.feature:23)\r\nCaused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)\r\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:893)\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:928)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:32)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:26)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)\r\n\tat cucumber.api.TestStep.executeStep(TestStep.java:102)\r\n\tat cucumber.api.TestStep.run(TestStep.java:83)\r\n\tat cucumber.api.TestCase.run(TestCase.java:58)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:80)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:117)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:55)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:126)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "status code \"400\"",
@@ -207,7 +699,7 @@ formatter.match({
   "location": "GeneralSteps.statusCode(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "Do not add information in the login form",
@@ -252,8 +744,7 @@ formatter.match({
   "location": "GeneralSteps.theSystemShouldRetrieveError(String)"
 });
 formatter.result({
-  "error_message": "io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:930)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)\r\n\tat ✽.the system should retrieve error \"Please fill all mandatory fields\"(src/test/resources/login.feature:23)\r\nCaused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)\r\n\tat io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:893)\r\n\tat io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:928)\r\n\tat io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:895)\r\n\tat io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:975)\r\n\tat io.restassured.path.json.JsonPath.get(JsonPath.java:201)\r\n\tat steps.GeneralSteps.theSystemShouldRetrieveError(GeneralSteps.java:33)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:32)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:26)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)\r\n\tat cucumber.api.TestStep.executeStep(TestStep.java:102)\r\n\tat cucumber.api.TestStep.run(TestStep.java:83)\r\n\tat cucumber.api.TestCase.run(TestCase.java:58)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:80)\r\n\tat cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:117)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:55)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:126)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "status code \"400\"",
@@ -263,6 +754,551 @@ formatter.match({
   "location": "GeneralSteps.statusCode(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.uri("src/test/resources/registerUser.feature");
+formatter.feature({
+  "name": "Register",
+  "description": "  As an anonymous user\n  I want TO get registered\n  So that I can have a profile and interact with the page",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Create account with valid data",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Estefania has the register information",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaHasValidData()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the service should response with a token",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "GeneralSteps.theServiceShouldResponseWithAToken()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"200\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "Create an account with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the following data \"\u003cemail\u003e\", \"\u003cpassword\u003e\" and \"\u003cverificationPassword\u003e\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "the system should retrieve \"\u003cerror\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "email",
+        "password",
+        "verificationPassword",
+        "error"
+      ]
+    },
+    {
+      "cells": [
+        "email",
+        "Abcdefg0",
+        "Abcdefg0",
+        "The email is invalid"
+      ]
+    },
+    {
+      "cells": [
+        ",email@domain.co",
+        "Abcdefg0",
+        "Abcdefg0",
+        "The email is invalid"
+      ]
+    },
+    {
+      "cells": [
+        "email@domain.com",
+        "abcdefg0",
+        "abcdefg0",
+        "The password must contain at least one capital letter"
+      ]
+    },
+    {
+      "cells": [
+        "email@domain.com",
+        "Abcdefgh",
+        "Abcdefgh",
+        "The password must contain a number"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Create an account with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the following data \"email\", \"Abcdefg0\" and \"Abcdefg0\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaHasTheFollowingDataAnd(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"The email is invalid\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Create an account with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the following data \",email@domain.co\", \"Abcdefg0\" and \"Abcdefg0\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaHasTheFollowingDataAnd(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"The email is invalid\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Create an account with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the following data \"email@domain.com\", \"abcdefg0\" and \"abcdefg0\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaHasTheFollowingDataAnd(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"The password must contain at least one capital letter\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Create an account with invalid data",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the following data \"email@domain.com\", \"Abcdefgh\" and \"Abcdefgh\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaHasTheFollowingDataAnd(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"The password must contain a number\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "Create an account with existing field",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the register information",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "existent \"\u003cfield\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "the system should retrieve \"\u003cerror\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "field",
+        "error"
+      ]
+    },
+    {
+      "cells": [
+        "email",
+        "User already exist"
+      ]
+    },
+    {
+      "cells": [
+        "document",
+        "User already exist"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Create an account with existing field",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the register information",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaHasValidData()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "existent \"email\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "RegisterStep.existent(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"User already exist\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Create an account with existing field",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "Estefania has the register information",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaHasValidData()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "existent \"document\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "RegisterStep.existent(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve \"User already exist\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "RegisterStep.theSystemShouldRetrieve(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"400\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Do not add any information in the register form",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Estefania does not send any information",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "RegisterStep.estefaniaDoesNotSendAnyInformation()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the registration service",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "RegisterStep.sheSendARequestToTheRegistrationService()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve status code \"400\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "GeneralSteps.theSystemShouldRetrieveStatusCode(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.uri("src/test/resources/seeEvents.feature");
+formatter.feature({
+  "name": "See events",
+  "description": "  AS a logged user\n  I WANT TO see all the events\n  SO THAT I can give feedback to events and persons",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "See all events",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "Estefania\thas an active session",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "GeneralSteps.estefaniaHasAnActiveSession()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "she sends a request to the events profile",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SeeEventsSteps.sheSendsARequestToTheEventsProfile()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the system should retrieve a list of events containing name, description, creationDate, place, id, eventQuestionnaires",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SeeEventsSteps.theSystemShouldRetrieveAListOfEventsContainingNameDescriptionCreationDatePlaceIdEventQuestionnaires()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "status code \"200\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "GeneralSteps.statusCode(String)"
+});
+formatter.result({
+  "status": "passed"
 });
 });

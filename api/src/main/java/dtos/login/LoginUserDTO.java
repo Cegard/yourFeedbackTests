@@ -7,7 +7,7 @@ import utils.Utils;
 @Data
 @Accessors(chain = true)
 public class LoginUserDTO {
-    private String email;
+    private String username;
     private String password;
 
     public static LoginUserDTO getEmptyLoginUser() {
@@ -18,17 +18,17 @@ public class LoginUserDTO {
         return new LoginUserDTO(Utils.getRandomEmail(), Utils.getRandomPassword());
     }
 
-    public static LoginUserDTO getLoginUserWith(String email, String password) {
-        return new LoginUserDTO(email, password);
+    public static LoginUserDTO getLoginUserWith(String username, String password) {
+        return new LoginUserDTO(username, password);
     }
 
     public LoginUserDTO() {
-        this.email = "";
+        this.username = "";
         this.password = "";
     }
 
-    public LoginUserDTO(String email, String password) {
-        this.email = email;
+    public LoginUserDTO(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 }

@@ -4,7 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import dtos.login.LoginUserDTO;
-import dtos.register.RegisterUserDTO;
+import dtos.profile.ProfileDTO;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Steps;
 import services.LoginService;
@@ -18,22 +18,22 @@ public class LoginSteps {
     Object body;
 
     @Given("^Estefania has an account$")
-    public void estefaniaHasAnAccount() throws Throwable {
-        RegisterUserDTO registerUserDTO = RegisterUserDTO.getRandomRegisterUser();
-        registerService.sendRequest(registerUserDTO);
-        Serenity.setSessionVariable("email").to(registerUserDTO.getEmail());
-        Serenity.setSessionVariable("password").to(registerUserDTO.getPassword());
+    public void estefaniaHasAnAccount() {
+        ProfileDTO profileDTO = ProfileDTO.getRandomProfile();
+        registerService.sendRequest(profileDTO);
+        Serenity.setSessionVariable("email").to(profileDTO.getEmail());
+        Serenity.setSessionVariable("password").to(profileDTO.getPassword());
     }
 
     @And("^she fills the login information$")
-    public void sheFillsTheLoginInformation() throws Throwable {
-        body = LoginUserDTO.getLoginUserWith(Serenity.sessionVariableCalled("email"), Serenity.sessionVariableCalled("password"));
+    public void sheFillsTheLoginInformation() {
+        body = LoginUserDTO.getLoginUserWith(Serenity.sessionVariableCalled("email").toString(), Serenity.sessionVariableCalled("password").toString());
     }
 
     @Given("^Estefania has the login information$")
     public void estefaniaHasTheLoginInformation() {
-        RegisterUserDTO registerUserDTO = RegisterUserDTO.getRandomRegisterUser();
-        body = LoginUserDTO.getLoginUserWith(registerUserDTO.getEmail(), registerUserDTO.getPassword());
+        ProfileDTO profileDTO = ProfileDTO.getRandomProfile();
+        body = LoginUserDTO.getLoginUserWith(profileDTO.getEmail(), profileDTO.getPassword());
         registerService.sendRequest(body);
     }
 

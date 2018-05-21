@@ -7,9 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EditService extends Proxy {
-
-
-    private String url = "http://54.226.98.250:9090/auth/setUser";
+    private String url = "http://172.17.228.115:9090/setUser";
 
     public ResponseOptions<Response> sendRequest(Object body) {
         Map<String, String> headers = new HashMap<>();

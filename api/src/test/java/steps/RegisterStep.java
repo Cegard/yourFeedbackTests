@@ -4,7 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import dtos.register.RegisterUserDTO;
+import dtos.profile.ProfileDTO;
 import net.thucydides.core.annotations.Steps;
 import services.RegisterService;
 import utils.Utils;
@@ -20,7 +20,7 @@ public class RegisterStep {
 
     @Given("^Estefania has the register information$")
     public void estefaniaHasValidData() {
-        body = RegisterUserDTO.getRandomRegisterUser();
+        body = ProfileDTO.getRandomProfile();
     }
 
     @When("^she sends a request to the registration service$")
@@ -30,31 +30,36 @@ public class RegisterStep {
 
     @Given("^Estefania has the following data \"([^\"]*)\", \"([^\"]*)\" and \"([^\"]*)\"$")
     public void estefaniaHasTheFollowingDataAnd(String email, String password, String verificationPassword) {
-        body = new RegisterUserDTO(email, password, verificationPassword);
+        body = new ProfileDTO(email, password, verificationPassword);
     }
 
     @Then("^the system should retrieve \"([^\"]*)\"$")
     public void theSystemShouldRetrieve(String error) {
-        assertThat(then().extract().response().getBody().jsonPath().get("error"), equalTo(error));
+       // assertThat(then().extract().response().getBody().jsonPath().get("error"), equalTo(error));
+        assertThat(then().extract().response().asString(), equalTo(error));
     }
 
     @And("^existent \"([^\"]*)\"$")
     public void existent(String field) {
+        body = ProfileDTO.getRandomProfile();
         registerService.sendRequest(body);
-        if (field == "email") {
-            ((RegisterUserDTO) body).setDocument(Utils.getRandomNumeric());
-        } else if (field == "document") {
-            ((RegisterUserDTO) body).setEmail(Utils.getRandomEmail());
+
+
+        if (field == "document") {
+            ((ProfileDTO) body).setDocument(Utils.getRandomNumeric());
+        } else if (field == "email") {
+            ((ProfileDTO) body).setEmail(Utils.getRandomEmail());
         }
-    }
+
+         }
 
     @Given("^Estefania has valid data and existent \"([^\"]*)\"$")
     public void estefaniaHasValidDataAndExistent(String field) {
-        body = RegisterUserDTO.getRandomRegisterUser();
+        body = ProfileDTO.getRandomProfile();
     }
 
     @Given("^Estefania does not send any information$")
     public void estefaniaDoesNotSendAnyInformation() {
-        body = RegisterUserDTO.getEmptyRegisterUser();
+        body = ProfileDTO.getEmptyProfile();
     }
 }

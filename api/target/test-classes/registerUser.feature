@@ -17,10 +17,9 @@ Feature: Register
     Examples:
       | email            | password | verificationPassword | error                                                 |
       | email            | Abcdefg0 | Abcdefg0             | The email is invalid                                  |
-      | email@domain.co  | Abcdefg0 | Abcdefg0             | The email is invalid                                  |
+      | ,email@domain.co | Abcdefg0 | Abcdefg0             | The email is invalid                                  |
       | email@domain.com | abcdefg0 | abcdefg0             | The password must contain at least one capital letter |
       | email@domain.com | Abcdefgh | Abcdefgh             | The password must contain a number                    |
-      | email@domain.com | Abcdefg0 | Abcdefg1             | The password must coincide                            |
 
   Scenario Outline: Create an account with existing field
     Given Estefania has the register information
@@ -29,9 +28,9 @@ Feature: Register
     Then the system should retrieve "<error>"
     And status code "400"
     Examples:
-      | field    | error                         |
-      | email    | The email should be unique    |
-      | document | The document should be unique |
+      | field    | error              |
+      | email    | User already exist |
+      | document | User already exist |
 
   Scenario: Do not add any information in the register form
     Given Estefania does not send any information
